@@ -17,7 +17,7 @@ fn binary_search(arr: &[i32], target: i32) -> Option<usize> {
 
 fn main() {
     let arr: Vec<i32> = vec![1, 2, 5, 6, 10, 12, 17, 32, 55];
-    let target: i32 = 5;
+    let target: i32 = 55;
     
     match binary_search(&arr, target) {
         Some(index) => println!("Target {} found at index {} ✅", target, index),
