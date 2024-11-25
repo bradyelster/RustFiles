@@ -1,4 +1,7 @@
-fn bubble_sort<T: Ord>(arr: &mut [T]) {
+// An attribute to hide warnings for unused code.
+#![allow(dead_code)]
+
+pub fn bubble_sort<T: Ord>(arr: &mut [T]) {
     let n = arr.len();
     for i in 0..n {
         for j in 0..n - i - 1 {

@@ -1,4 +1,7 @@
-fn riemann<F>(f: F, endpoints: (f64, f64), n_subdivisions: u64) -> f64
+// An attribute to hide warnings for unused code.
+#![allow(dead_code)]
+
+pub fn riemann<F>(f: F, endpoints: (f64, f64), n_subdivisions: u64) -> f64
 where 
     F: Fn(f64) -> f64, // The type of function `f` must accept a f64 and return a f64
 {
@@ -13,13 +16,13 @@ where
     sum
 }
 
-fn round_to_n_decimal(x: f64, places: u32) -> f64 {
+pub fn round_to_n_decimal(x: f64, places: u32) -> f64 {
     let scale: f64 = 10f64.powi(places as i32);
     (x * scale).round() / scale
 }
 
 // Define the integrand f(x)
-fn integrand(x: f64) -> f64 {
+pub fn integrand(x: f64) -> f64 {
     x.powi(5) + 1.0
 }
 

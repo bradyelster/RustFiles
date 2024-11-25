@@ -1,3 +1,6 @@
+// An attribute to hide warnings for unused code.
+#![allow(dead_code)]
+
 fn main() {
     let x: f64 = 1.0; // regular annotation
     let y = 1.0f64; // Suffix annotation

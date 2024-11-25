@@ -1,4 +1,7 @@
-fn quicksort<T: Ord>(arr: &mut [T]) {
+// An attribute to hide warnings for unused code.
+#![allow(dead_code)]
+
+pub fn quicksort<T: Ord>(arr: &mut [T]) {
     let len = arr.len();
     if len <= 1 {
         return;
@@ -11,7 +14,7 @@ fn quicksort<T: Ord>(arr: &mut [T]) {
     quicksort(&mut arr[pivot_index + 1..]);
 }
 
-fn partition<T: Ord>(arr: &mut [T]) -> usize {
+pub fn partition<T: Ord>(arr: &mut [T]) -> usize {
     let len = arr.len();
     let pivot_index = len / 2;
     arr.swap(pivot_index, len - 1);

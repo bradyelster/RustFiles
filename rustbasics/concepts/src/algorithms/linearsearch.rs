@@ -1,4 +1,7 @@
-fn linear_search(arr: &[i32], target: i32) {
+// An attribute to hide warnings for unused code.
+#![allow(dead_code)]
+
+pub fn linear_search(arr: &[i32], target: i32) {
     for (index, &value) in arr.iter().enumerate() { // Use `enumerate` to get index and value
         if value == target {
             println!("Target found at index {}.", index);

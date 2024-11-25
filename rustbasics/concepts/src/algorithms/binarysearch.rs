@@ -1,4 +1,7 @@
-fn binary_search(arr: &[i32], target: i32) -> Option<usize> {
+// An attribute to hide warnings for unused code.
+#![allow(dead_code)]
+
+pub fn binary_search(arr: &[i32], target: i32) -> Option<usize> {
     let mut left: usize = 0;
     let mut right: usize = arr.len();
 
@@ -13,7 +16,6 @@ fn binary_search(arr: &[i32], target: i32) -> Option<usize> {
     }
     None // target not found
 }
-    
 
 fn main() {
     let arr: Vec<i32> = vec![1, 2, 5, 6, 10, 12, 17, 32, 55];
